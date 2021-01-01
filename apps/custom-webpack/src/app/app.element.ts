@@ -1,18 +1,12 @@
 import './app.element.css';
+import template from './app.element.html';
 
 export class AppElement extends HTMLElement {
   public static observedAttributes = [];
 
   connectedCallback() {
     const title = 'custom-webpack';
-    this.innerHTML = `
-      <header class="flex">
-    <h1>Welcome to ${title}!</h1>
-</header>
-<main>
-    <h2>Welcome to our app!</h2>
-</main>
-    `;
+    this.innerHTML = template.replace('${title}', title);
   }
 }
 customElements.define('custom-webpack-root', AppElement);

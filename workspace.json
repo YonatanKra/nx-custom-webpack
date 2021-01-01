@@ -24,7 +24,8 @@
             "styles": [
               "apps/custom-webpack/src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "webpackConfig":  "apps/custom-webpack/webpackConfig.js"
           },
           "configurations": {
             "production": {
@@ -54,7 +55,8 @@
         "serve": {
           "executor": "@nrwl/web:dev-server",
           "options": {
-            "buildTarget": "custom-webpack:build"
+            "buildTarget": "custom-webpack:build",
+            "webpackConfig":  "apps/custom-webpack/webpackConfig.js"
           },
           "configurations": {
             "production": {
